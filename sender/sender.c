@@ -25,7 +25,7 @@ void PrintBMSParametersOnConsole(float* Temperature, float* SOC, float* ChargeRa
   }
 }
 
-void sendBMSParameters()
+void SendBMSParameters()
 {
   float Temperature[TotalSamples] = {0};
   float StateOfCharge[TotalSamples]= {0};
