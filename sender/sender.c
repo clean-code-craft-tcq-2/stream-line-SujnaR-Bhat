@@ -17,7 +17,7 @@ void ReadBMSParametersFromFile(float* Temperature, float* SOC, float* ChargeRate
     fclose(Inputfile);  
 }
 
-void printBMSParametersOnConsole(float* Temperature, float* SOC, float* ChargeRate)
+void PrintBMSParametersOnConsole(float* Temperature, float* SOC, float* ChargeRate)
 {
    
   for (int i=0; i<TotalSamples; i++)
@@ -31,5 +31,5 @@ void sendBMSParameters(){
   float StateOfCharge[TotalSamples]= {0};
   float ChargeRate[TotalSamples] = {0};
   ReadBMSParametersFromFile(Temperature, StateOfCharge, ChargeRate);
-  printBMSParametersOnConsole(Temperature, StateOfCharge, ChargeRate);
+  PrintBMSParametersOnConsole(Temperature, StateOfCharge, ChargeRate);
 }
