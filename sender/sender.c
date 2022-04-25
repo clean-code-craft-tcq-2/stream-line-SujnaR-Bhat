@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "sender.h"
 
-void ReadBMSParametersFromFile(float* Temp, float* SOC, float* ChrgRt)
+void ReadBMSParametersFromInputFile(float* Temp, float* SOC, float* ChrgRt)
 {
     float Temperature, StateOfCharge, ChargeRate;
     FILE * Inputfile= fopen("./sender/sender.txt","r");  
@@ -30,6 +30,6 @@ void SendBMSParameters()
   float Temperature[TotalSamples] = {0};
   float StateOfCharge[TotalSamples]= {0};
   float ChargeRate[TotalSamples] = {0};
-  ReadBMSParametersFromFile(Temperature, StateOfCharge, ChargeRate);
+  ReadBMSParametersFromInputFile(Temperature, StateOfCharge, ChargeRate);
   PrintBMSParametersOnConsole(Temperature, StateOfCharge, ChargeRate);
 }
