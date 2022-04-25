@@ -11,7 +11,7 @@ void ReadBMSParametersFromFile(float* Temp, float* SOC, float* ChrgRt)
         {
             *(Temp+i) = Temperature;
             *(SOC+i)  = StateOfCharge;
-            *(ChrgRt+i)   = ChargeRate;
+            *(ChrgRt+i)  = ChargeRate;
         }
     }
     fclose(Inputfile);  
@@ -27,9 +27,9 @@ void PrintBMSParametersOnConsole(float* Temp, float* SOC, float* ChrgRt)
 
 void SendBMSParameters()
 {
-  float Temperature[TotalSamples] = {0};
+  float Temp[TotalSamples] = {0};
   float StateOfCharge[TotalSamples]= {0};
-  float ChargeRate[TotalSamples] = {0};
-  ReadBMSParametersFromFile(Temp, StateOfCharge, ChrgRt);
-  PrintBMSParametersOnConsole(Temp, StateOfCharge, ChrgRt);
+  float ChrgRt[TotalSamples] = {0};
+  ReadBMSParametersFromFile(Temperature, StateOfCharge, ChargeRate);
+  PrintBMSParametersOnConsole(Temperature, StateOfCharge, ChargeRate);
 }
