@@ -19,5 +19,5 @@ TEST_CASE("Check whether reading and passing of the data is successful")
     REQUIRE(ChargeRate[j] == ExpectedOutput[i][2]);
     j++;
   }
-    sendBMSParameters();
+    SendBMSParameters();
 }
