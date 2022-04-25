@@ -27,9 +27,9 @@ void PrintBMSParametersOnConsole(float* Temp, float* SOC, float* ChrgRt)
 
 void SendBMSParameters()
 {
-  float Temp[TotalSamples] = {0};
+  float Temperature[TotalSamples] = {0};
   float StateOfCharge[TotalSamples]= {0};
-  float ChrgRt[TotalSamples] = {0};
+  float ChargeRate[TotalSamples] = {0};
   ReadBMSParametersFromFile(Temperature, StateOfCharge, ChargeRate);
   PrintBMSParametersOnConsole(Temperature, StateOfCharge, ChargeRate);
 }
