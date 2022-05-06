@@ -77,3 +77,23 @@ void computeSMA(float *input, int windowsize, float *movingAvg) {
 	 }
      }
 }
+			
+void BMSReceiver(float* Temp,float* SOC , int TotalSamples)
+{
+	float minI, maxI, minU, maxU;
+    ReadBMSParametersfromConsole(float* Temp,float* SOC , int TotalSamples);
+    MinValue = ComputeMinBMS_Data(BMS_DataPtr);
+    MaxValue = ComputeMaxBMS_Data(BMS_DataPtr);
+    AvgValue = ComputeAvgBMS_Data(BMS_DataPtr);
+}
+			
+	
+void minMaxValues(float* Temp, float* SOC, int TotalSamples) 
+{
+  float mintemp, maxtemp, minSOC, maxSOC;
+  mintemp = CalculateMinValue(temp[], TotalSamples);
+  maxtemp = CalculateMaxValue(temp[], TotalSamples);
+  minSOC = CalculateMinValue(SOC[], TotalSamples);
+  maxSOC = CalculateMaxValue(SOC[], TotalSamples);
+  printf("min current: %f max current: %f min voltage: %f max voltage: %f\n", mintemp, maxtemp, minSOC, maxSOC);
+}
