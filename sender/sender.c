@@ -7,7 +7,7 @@ void ReadBMSParametersFromInputFile(float* Temp, float* SOC)
     FILE * Inputfile= fopen("./sender/sender.txt","r");  
     if (Inputfile!=NULL) 
     {
-        for(int i=0;fscanf(Inputfile, "%f\t%f\t%f\n", &Temperature,&StateOfCharge)!=EOF ;i++)
+        for(int i=0;fscanf(Inputfile, "%f\t%f\n", &Temperature,&StateOfCharge)!=EOF ;i++)
         {
             *(Temp+i) = Temperature;
             *(SOC+i)  = StateOfCharge;
