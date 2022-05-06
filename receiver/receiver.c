@@ -32,7 +32,8 @@ float CalculateMinValue((float* InputData[] , int TotalSamples)
     }
     return MinValue;
 }
-                        
+
+
 
 float CalculateMaxValue(float* InputData[] , int TotalSamples)
 {
@@ -58,4 +59,21 @@ float computeAvg(float* InputData[], int TotalSamples)
     }
     avg = sum/TotalSamples;
     return avg;
+}
+
+			
+void computeSMA(float *input, int windowsize, float *movingAvg) {
+     float sum = 0;
+     for (int i = 0; i < 50; i++) 
+     {
+         sum = sum + input[i];
+         if (i >= windowsize)
+	 {
+	     sum -= input[i-windowsize];
+	 }
+	 if(i >= windowsize - 1)
+	 {
+            movingAvg[i-windowsize] = sum/windowsize;
+	 }
+     }
 }
