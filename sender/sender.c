@@ -21,7 +21,7 @@ void PrintBMSParametersOnConsole(float* Temp, float* SOC)
 {
   for (int i=0; i<TotalSamples; i++)
   {
-    printf(" Temperature:%.2f deg C, State of Charge:%.2f,  *(Temp+i),*(SOC+i));
+    printf(" Temperature:%.2f deg C, State of Charge:%.2f",  *(Temp+i),*(SOC+i));
   }
 }
 
