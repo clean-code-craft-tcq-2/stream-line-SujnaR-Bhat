@@ -11,7 +11,7 @@ TEST_CASE("Check whether reading and passing of the data is successful")
   
   ReadBMSParametersFromInputFile(Temperature,StateOfCharge);
   int j= 0, i= 0;
-  for(i=0;i<3;i++)
+  for(i=0;i<2;i++)
   {
     REQUIRE(Temperature[j] == ExpectedOutput[i][0]);
     REQUIRE(StateOfCharge[j] == ExpectedOutput[i][1]);
