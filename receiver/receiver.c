@@ -17,7 +17,7 @@ void ReadBMSParametersfromConsole(float* Temp,float* SOC , int TotalSamples)
         scanf("%f",&Temp[i]);
         scanf("%20s", ReadString); //deg
         scanf("%20s", ReadString); //C 
-         scanf("%20s", ReadString); //,
+        scanf("%20s", ReadString); //,
         scanf("%f",&SOC[i]);
 	  printf("%.3f \t %.3f\n",currentReading[i],SOC[i]);
     }
@@ -52,7 +52,7 @@ float CalculateMaxValue(float* InputData[] , int TotalSamples)
 }
                         
 
-float computeAvg(float* InputData[], int TotalSamples)
+float CalculateAvg(float* InputData[], int TotalSamples)
 {
     float avg = 0;
     float sum = 0;
@@ -65,7 +65,7 @@ float computeAvg(float* InputData[], int TotalSamples)
 }
 
 			
-void computeSMA(float *input, int windowsize, float *movingAvg) {
+void CalculateSMA(float *input, int windowsize, float *movingAvg) {
      float sum = 0;
      for (int i = 0; i < 50; i++) 
      {
@@ -82,7 +82,7 @@ void computeSMA(float *input, int windowsize, float *movingAvg) {
 }
 			
 	
-void minMaxValues(float* Temp, float* SOC, int TotalSamples) 
+void PrintMinMaxValues(float* Temp, float* SOC, int TotalSamples) 
 {
   float mintemp, maxtemp, minSOC, maxSOC;
   ReadBMSParametersfromConsole(float* Temp,float* SOC , int TotalSamples);
