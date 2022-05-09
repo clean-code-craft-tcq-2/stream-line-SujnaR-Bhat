@@ -23,7 +23,7 @@ void ReadBMSParametersfromConsole(float* Temp,float* SOC , int TotalSamples)
     }
 }
 
-float CalculateMinValue(float* InputData[] , int TotalSamples)
+float CalculateMinValue(float* InputData, int TotalSamples)
 {
   float MinValue = InputData[0];
     for(int i=1; i<TotalSamples; i++)
@@ -38,7 +38,7 @@ float CalculateMinValue(float* InputData[] , int TotalSamples)
 
 
 
-float CalculateMaxValue(float* InputData[] , int TotalSamples)
+float CalculateMaxValue(float* InputData, int TotalSamples)
 {
   float MaxValue = InputData[0];
     for(int i=1; i<TotalSamples; i++)
@@ -52,7 +52,7 @@ float CalculateMaxValue(float* InputData[] , int TotalSamples)
 }
                         
 
-float CalculateAvg(float* InputData[], int TotalSamples)
+float CalculateAvg(float* InputData, int TotalSamples)
 {
     float Avg = 0;
     float Sum = 0;
