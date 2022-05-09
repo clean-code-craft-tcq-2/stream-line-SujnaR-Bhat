@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdio.h>
 
-TEST_CASE("Test for finding Max , Min and Avg value") 
+TEST_CASE("Test for finding Max , Min and Avg value for temp") 
 {
   float temp[5]= {2, 5, 10, 15, 20};
   float Max = CalculateMaxValue(temp, 5);
@@ -13,4 +13,15 @@ TEST_CASE("Test for finding Max , Min and Avg value")
   REQUIRE(Max == 20);
   REQUIRE(Min == 2);
   REQUIRE( abs(Avg - 10.4f ) <=0.001);
+}
+
+TEST_CASE("Test for finding Max , Min and Avg value for SOC") 
+{
+  float temp[5]= {5, 5, 10, 5, 10};
+  float Max = CalculateMaxValue(temp, 5);
+  float Min = CalculateMinValue(temp, 5);
+  float Avg = CalculateAvg(temp , 5);
+  REQUIRE(Max == 10);
+  REQUIRE(Min == 5);
+  REQUIRE(Avg==7);
 }
