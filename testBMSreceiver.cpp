@@ -10,7 +10,7 @@ TEST_CASE("Test for finding Max , Min and Avg value")
   float Max = CalculateMaxValue(temp, 5);
   float Min = CalculateMinValue(temp, 5);
   float Avg = CalculateAvg(temp , 5);
-  REQUIRE(Max == 20f);
-  REQUIRE(Min == 2f);
+  REQUIRE(Max == 20);
+  REQUIRE(Min == 2);
   REQUIRE( abs(Avg - 10.4f ) <=0.001);
 }
