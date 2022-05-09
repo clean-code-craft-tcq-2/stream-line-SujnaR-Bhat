@@ -23,7 +23,7 @@ void ReadBMSParametersfromConsole(float* Temp,float* SOC , int TotalSamples)
     }
 }
 
-float CalculateMinValue((float* InputData[] , int TotalSamples)
+float CalculateMinValue(float* InputData[] , int TotalSamples)
 {
   float MinValue = InputData[0];
     for(int i=1; i<TotalSamples; i++)
@@ -65,7 +65,8 @@ float CalculateAvg(float* InputData[], int TotalSamples)
 }
 
 			
-void CalculateSMA(float *InputData, int windowsize, float *MovingAvg) {
+void CalculateSMA(float *InputData, int windowsize, float *MovingAvg)
+{
      float Sum = 0;
      for (int i = 0; i < 50; i++) 
      {
