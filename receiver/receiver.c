@@ -19,7 +19,7 @@ void ReadBMSParametersfromConsole(float* Temp,float* SOC , int TotalSamples)
         scanf("%20s", ReadString); //C 
         scanf("%20s", ReadString); //,
         scanf("%f",&SOC[i]);
-	  printf("%.3f \t %.3f\n",currentReading[i],SOC[i]);
+	  printf("%.3f \t %.3f\n",Temp[i],SOC[i]);
     }
 }
 
