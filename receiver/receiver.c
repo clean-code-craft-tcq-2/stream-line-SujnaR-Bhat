@@ -87,9 +87,9 @@ void PrintMinMaxValues(float* Temp, float* SOC, int TotalSamples)
 {
   float mintemp, maxtemp, minSOC, maxSOC;
   ReadBMSParametersfromConsole(float* Temp,float* SOC , int TotalSamples);
-  mintemp = CalculateMinValue(temp[], TotalSamples);
-  maxtemp = CalculateMaxValue(temp[], TotalSamples);
-  minSOC = CalculateMinValue(SOC[], TotalSamples);
-  maxSOC = CalculateMaxValue(SOC[], TotalSamples);
+  mintemp = CalculateMinValue(temp, TotalSamples);
+  maxtemp = CalculateMaxValue(tem, TotalSamples);
+  minSOC = CalculateMinValue(SOC, TotalSamples);
+  maxSOC = CalculateMaxValue(SOC, TotalSamples);
   printf("min current: %f max current: %f min voltage: %f max voltage: %f\n", mintemp, maxtemp, minSOC, maxSOC);
 }
