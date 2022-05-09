@@ -9,4 +9,4 @@ float computeAvg(float* InputData, int TotalSamples);
                         
 void computeSMA(float *input, int windowsize, float *movingAvg);
                         
-void BMSReceiver(float* Temp,float* SOC , int TotalSamples);
+
