@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "sender.
+#include "sender.h"
 
 void ReadBMSParametersFromInputFile(float* Temp, float* SOC)
 {
