@@ -17,7 +17,7 @@ TEST_CASE("Test for finding Max , Min and Avg value for temp")
 
 TEST_CASE("Test for finding Max , Min and Avg value for SOC") 
 {
-  float temp[5]= {5, 5, 10, 5, 10};
+  float SOC[5]= {5, 5, 10, 5, 10};
   float Max = CalculateMaxValue(SOC, 5);
   float Min = CalculateMinValue(SOC, 5);
   float Avg = CalculateAvg(SOC , 5);
