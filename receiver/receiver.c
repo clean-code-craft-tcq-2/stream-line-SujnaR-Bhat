@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void ReadBMSParametersfromConsole(float* temp,float* SOC , int TotalSamples)
+void ReadBMSParametersfromConsole(float* Temp,float* SOC , int TotalSamples)
 {
   char ReadString[250];
   
@@ -19,7 +19,7 @@ void ReadBMSParametersfromConsole(float* temp,float* SOC , int TotalSamples)
         scanf("%20s", ReadString); //C 
         scanf("%20s", ReadString); //,
         scanf("%f",&SOC[i]);
-	  printf("%.3f \t %.3f\n",temp[i],SOC[i]);
+	  printf("%.3f \t %.3f\n",Temp[i],SOC[i]);
     }
 }
 
@@ -83,12 +83,11 @@ void CalculateSMA(float *InputData, int windowsize, float *MovingAvg)
 }
 			
 	
-void PrintMinMaxValues(float* temp, float* SOC, int TotalSamples) 
+void PrintMinMaxValues(float* Temp, float* SOC, int TotalSamples) 
 {
   float mintemp, maxtemp, minSOC, maxSOC;
-  ReadBMSParametersfromConsole(float* Temp,float* SOC , int TotalSamples);
-  mintemp = CalculateMinValue(temp, TotalSamples);
-  maxtemp = CalculateMaxValue(temp, TotalSamples);
+  mintemp = CalculateMinValue(Temp, TotalSamples);
+  maxtemp = CalculateMaxValue(Temp, TotalSamples);
   minSOC = CalculateMinValue(SOC, TotalSamples);
   maxSOC = CalculateMaxValue(SOC, TotalSamples);
   printf("min current: %f max current: %f min voltage: %f max voltage: %f\n", mintemp, maxtemp, minSOC, maxSOC);
